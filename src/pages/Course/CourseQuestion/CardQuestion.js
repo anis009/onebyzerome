@@ -40,7 +40,7 @@ const CardQuestion = ({ question, setQuestions, setDeleteQuestion }) => {
 
 	// TODO:: CHECK WHETHER USER LOGIN OR NOT
 	const fullViewHandler = () => {
-		alert("Please,Login to see View");
+		alert("Please login to view");
 		return;
 	};
 

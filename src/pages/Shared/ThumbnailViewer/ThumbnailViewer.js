@@ -9,7 +9,7 @@ function ThumbnailViewer({ thumbnail, bookName, author, link }) {
 	console.log("thumbnail", thumbnail);
 	const { user } = useContext(AuthContext);
 	const fullViewHandler = () => {
-		alert("Please,Login to see View");
+		alert("Please login to view");
 		return;
 	};
 	return (

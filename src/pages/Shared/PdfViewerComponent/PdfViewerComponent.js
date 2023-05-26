@@ -19,7 +19,7 @@ const PdfViewerComponent = ({ type, file, link, session, examName }) => {
 
 	const { user } = useContext(AuthContext);
 	const fullViewHandler = () => {
-		alert("Please,Login to see View");
+		alert("Please login to view");
 		return;
 	};
 
