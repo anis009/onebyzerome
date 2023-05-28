@@ -32,7 +32,7 @@ const MyPosition = ({ data, user }) => {
 			<div className="text-white justify-between w-[80%] mx-auto my-3 px-4 py-5 rounded-md shadow-md flex items-center bg-purple-900">
 				<div className="flex items-center">
 					<span className="font-xl font-semibold mr-4">
-						{myPosition?.idx}.{" "}
+						{myPosition?.idx + 1}.{" "}
 					</span>
 					<img
 						className="w-20 h-20 rounded-full"
