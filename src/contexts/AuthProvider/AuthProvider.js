@@ -10,6 +10,7 @@ import {
 	GoogleAuthProvider,
 	signInWithPopup,
 	updatePassword,
+	sendPasswordResetEmail,
 } from "firebase/auth";
 import app from "../../firebase/firebase.config.js";
 import { useState } from "react";
@@ -52,6 +53,10 @@ const AuthProvider = ({ children }) => {
 
 	const updateUserPassword = (password) => {
 		return updatePassword(auth.currentUser, password);
+	};
+
+	const forgotPassword = (email) => {
+		return sendPasswordResetEmail(auth, email);
 	};
 
 	const logOut = () => {
@@ -144,6 +149,7 @@ const AuthProvider = ({ children }) => {
 		handleGoogleSignIn,
 		setTitle,
 		activeUser,
+		forgotPassword,
 	};
 
 	return (

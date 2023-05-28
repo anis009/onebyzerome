@@ -20,6 +20,7 @@ import {
 import RecentBook from "../RecentItem/RecentItem.js";
 import Recent from "../Recent/Recent.js";
 import RecentAnimatedText from "../RecentAnimatedText/RecentAnimatedText.js";
+import InfiniteAnimation from "../InfiniteAnimation/InfiniteAnimation.js";
 
 const Home = () => {
 	const [isVisible, setIsVisible] = useState(false);

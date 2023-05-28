@@ -114,6 +114,12 @@ const Left = () => {
 				className=" bg-[#ffff] mx-auto login-form-height  rounded-2xl  p-10 lg:w-[70%] w-full m-10"
 			>
 				{error && <Alert>{error}</Alert>}
+				<p className={`text-xl  text-[${primary}]`}>
+					Already have an account?{" "}
+					<Link to="/login" className="font-semibold text-[#1f1d28]">
+						Login
+					</Link>
+				</p>
 				<h1 className={`mx-auto text-2xl text-[${primary}] font-semibold py-5`}>
 					Signup
 				</h1>
@@ -199,12 +205,6 @@ const Left = () => {
 						<span>Signup with google</span>
 					</button>
 				</div>
-				<p className={`text-xl mt-5 py-5 text-[${primary}]`}>
-					Already have an account?{" "}
-					<Link to="/login" className="font-semibold text-[#1f1d28]">
-						Login
-					</Link>
-				</p>
 			</form>
 		</div>
 	);

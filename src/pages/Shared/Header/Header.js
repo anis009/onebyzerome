@@ -36,6 +36,12 @@ const Header = () => {
 					</label>
 				</li>
 			)}
+
+			<li>
+				<Link className="hover:bg-[#1a1a1a] rounded-md " to="/contributors">
+					Contributors
+				</Link>
+			</li>
 		</>
 	);
 

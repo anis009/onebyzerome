@@ -19,6 +19,9 @@ import CourseBookDetails from "../../pages/Course/CourseBook/CourseBookDetails.j
 import Users from "../../pages/Admin/Users/Users/Users.js";
 import PdfDetails from "../../pages/Shared/PdfDetails/PdfDetails.js";
 import Chat from "../../pages/Chat/Chat.js";
+import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage.js";
+import ForgotPasswordPage from "../../pages/ForgotPassword/ForgotPassword.js";
+import Contributors from "../../pages/Contributors/Contributors/Contributors.js";
 
 const router = createBrowserRouter([
 	{
@@ -40,6 +43,14 @@ const router = createBrowserRouter([
 			{
 				path: "/signup",
 				element: <Signup></Signup>,
+			},
+			{
+				path: "/forgot-password",
+				element: <ForgotPasswordPage />,
+			},
+			{
+				path: "/contributors",
+				element: <Contributors />,
 			},
 			{
 				path: "/contribute/questions",
@@ -124,6 +135,10 @@ const router = createBrowserRouter([
 				),
 			},
 		],
+	},
+	{
+		path: "*",
+		element: <NotFoundPage />,
 	},
 ]);
 

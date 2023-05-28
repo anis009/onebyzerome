@@ -116,7 +116,12 @@ const Left = () => {
 				className=" bg-[#ffff] mx-auto login-form-height  rounded-2xl min-h-[60vh] p-10 lg:w-[65%] w-full m-10"
 			>
 				{error && <Alert>{error}</Alert>}
-
+				<p className={`text-xl text-[${primary}]`}>
+					New to OneByZero?{" "}
+					<Link to="/signup" className="font-semibold text-[#1f1d28]">
+						Register
+					</Link>
+				</p>
 				<h1 className={`mx-auto text-2xl text-[${primary}] font-semibold py-5`}>
 					Login
 				</h1>
@@ -149,8 +154,16 @@ const Left = () => {
 					<p className="mt-1 text-center text-red-800">
 						{errors?.password?.message}
 					</p>
+					<p className="text-right mt-3">
+						<Link
+							to="/forgot-password"
+							className="font-semibold text-xl text-[#1f1d28]"
+						>
+							Forgot password?
+						</Link>
+					</p>
 				</div>
-				<div className="w-full mt-8 ">
+				<div className="w-full mt-5 ">
 					<button
 						type="submit"
 						className={`w-full button bg-[${primary}] py-2 rounded-full items-center justify-between text-xl flex text-white`}
@@ -185,12 +198,6 @@ const Left = () => {
 						<span>Login with google</span>
 					</button>
 				</div>
-				<p className={`text-xl mt-5 py-5 text-[${primary}]`}>
-					New to OneByZero?{" "}
-					<Link to="/signup" className="font-semibold text-[#1f1d28]">
-						Register
-					</Link>
-				</p>
 			</form>
 		</div>
 	);
