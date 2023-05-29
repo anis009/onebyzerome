@@ -13,7 +13,7 @@ const Course = () => {
 		return (
 			<div className="pt-[80px]">
 				<h1 className="py-5 uppercase font-semibold max-w-[400px] my-5 mx-auto rounded-md text-center bg-red-200 text-red-900">
-					Sorry! There are no resources for this course.
+					Sorry!! There are no resources for this course.
 				</h1>
 			</div>
 		);
