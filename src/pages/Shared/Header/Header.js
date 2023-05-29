@@ -110,6 +110,15 @@ const Header = () => {
 									</li>
 								)}
 
+								<li>
+									<Link
+										className="hover:bg-[#1a1a1a] rounded-md "
+										to="/contributors"
+									>
+										Leaderboard
+									</Link>
+								</li>
+
 								<li onClick={handleClick}>
 									<NavLink
 										className={({ isActive }) =>

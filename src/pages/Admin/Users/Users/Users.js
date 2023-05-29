@@ -26,14 +26,14 @@ const Users = () => {
 	};
 	return (
 		<div className="px-5 pt-16">
-			<table class="border-collapse text-white text-left pl-2 border border-slate-500 w-full">
+			<table className="border-collapse text-white text-left pl-2 border border-slate-500 w-full">
 				<thead>
 					<tr>
-						<th class="border border-slate-600 pl-2">#</th>
-						<th class="border border-slate-600 pl-2">image</th>
-						<th class="border border-slate-600 pl-2">name</th>
-						<th class="border border-slate-600 pl-2">email</th>
-						<th class="border border-slate-600 pl-2">Action</th>
+						<th className="border border-slate-600 pl-2">#</th>
+						<th className="border border-slate-600 pl-2">image</th>
+						<th className="border border-slate-600 pl-2">name</th>
+						<th className="border border-slate-600 pl-2">email</th>
+						<th className="border border-slate-600 pl-2">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -41,17 +41,19 @@ const Users = () => {
 						data.map((user, index) => {
 							return (
 								<tr key={index}>
-									<td class="border border-slate-700 pl-2">{index + 1}</td>
-									<td class="border border-slate-700 pl-2 py-2">
+									<td className="border border-slate-700 pl-2">{index + 1}</td>
+									<td className="border border-slate-700 pl-2 py-2">
 										<img
 											src={user?.image}
 											className="w-12 h-12 mx-auto rounded-full"
 											alt=""
 										/>
 									</td>
-									<td class="border border-slate-700 pl-2">{user?.name}</td>
-									<td class="border border-slate-700 pl-2">{user?.email}</td>
-									<td class="border border-slate-700 pl-2">
+									<td className="border border-slate-700 pl-2">{user?.name}</td>
+									<td className="border border-slate-700 pl-2">
+										{user?.email}
+									</td>
+									<td className="border border-slate-700 pl-2">
 										<div>
 											{user?.userRole === "user" ? (
 												<button

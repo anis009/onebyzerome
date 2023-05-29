@@ -5,7 +5,7 @@ const Recent = ({ recent, index }) => {
 	const { createdAt, type } = recent;
 	return (
 		<div
-			className={`ml-5 text-white bg-[${secondary}] rounded-md shadow-md  px-3 py-4 mt-3`}
+			className={`sm:ml-5 text-white bg-[${secondary}] rounded-md shadow-md  px-3 py-4 mt-3`}
 		>
 			<div className="recent">
 				{recent.type === "question" ? (

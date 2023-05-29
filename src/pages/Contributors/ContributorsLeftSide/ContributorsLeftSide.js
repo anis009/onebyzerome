@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { getTopContributors } from "../../../utils/https/resourceHttp";
 import Loading from "../../Shared/Loading/Loading";
-import Contributor from "../Contributor/Contributor";
 import TopTenContributors from "../TopTenContributors/TopTenContributors";
 import LastContributors from "../LastContributors/LastContributors";
 import MyPosition from "../MyPosition/MyPosition";
@@ -26,7 +25,7 @@ const ContributorsLeftSide = () => {
 				<div>
 					{user && <MyPosition data={data} user={user} />}
 					<TopTenContributors data={data?.slice(0, 10)} />
-					<LastContributors data={data?.slice(10, data?.length)} />
+					<LastContributors data={data?.slice(10, 100)} />
 				</div>
 			)}
 		</div>
