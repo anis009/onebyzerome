@@ -22,7 +22,7 @@ import {
 const Home = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const { setTitle } = useContext(AuthContext);
-	const [width, setWidth] = useState();
+	const [width, setWidth] = useState(1200);
 	const handleResize = () => {
 		setWidth(window.innerWidth);
 	};
