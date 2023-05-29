@@ -39,3 +39,9 @@
 		transform: translateX(-100%);
 	}
 }
+
+@media only screen and (max-width: 800px) {
+	.display-animated-text {
+		display: none;
+	}
+}
