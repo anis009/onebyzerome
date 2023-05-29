@@ -39,7 +39,7 @@ const Header = () => {
 
 			<li>
 				<Link className="hover:bg-[#1a1a1a] rounded-md " to="/contributors">
-					Contributors
+					Leaderboard
 				</Link>
 			</li>
 		</>
