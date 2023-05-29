@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import useUser from "../../../hooks/useUser";
 import { DEFAULT_URL_SERVER } from "../../../constants/url";
 import { Link } from "react-router-dom";
+import Time from "../../Shared/Time/Time";
 
-const Text = ({ text, email, name }) => {
+const Text = ({ text, email, name, createdAt }) => {
 	const [, , userDetails] = useUser(email);
 	const [animation, setAnimation] = useState(false);
 
@@ -37,7 +38,8 @@ const Text = ({ text, email, name }) => {
 			>
 				{name}
 			</Link>
-			<p className=" text-white ml-2">{text}</p>
+			<p className=" text-white mx-2">{text}</p>
+			<Time time={createdAt} />
 		</div>
 	);
 };

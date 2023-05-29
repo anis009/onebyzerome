@@ -65,7 +65,7 @@ const Header = () => {
 			<div className="fixed top-0 z-50 w-full mx-auto max-w-screen-2xl navbar bg-[#373737] text-base-100">
 				<div className="navbar-start">
 					<div className="dropdown">
-						<label tabIndex={0} className="btn btn-ghost lg:hidden">
+						<label tabIndex={0} className="btn btn-ghost lg:hidden px-0">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								className="w-5 h-5"
@@ -132,9 +132,15 @@ const Header = () => {
 							</>
 						</ul>
 					</div>
-					<Link to="/" className="block outline-none ">
-						<img src={navbarLogo} className="h-[70px] min-w-[250px] " alt="" />
-					</Link>
+					<div className="sm:text-left sm:ml-2 ml-3 text-center sm:w-auto w-full mx-auto">
+						<Link to="/" className="block outline-none  ">
+							<img
+								src={navbarLogo}
+								className="sm:h-[70px] h-[40px] sm:w-auto min-w-[250px] "
+								alt=""
+							/>
+						</Link>
+					</div>
 				</div>
 				<div className="hidden navbar-center lg:flex">
 					<ul className="flex items-center w-full menu menu-horizontal">
@@ -145,7 +151,7 @@ const Header = () => {
 					{!user?.uid ? (
 						<Link
 							to="/login"
-							className="px-4 py-3 hover:bg-[#1a1a1a] rounded-md"
+							className="sm:px-4 px-1 py-3 hover:bg-[#1a1a1a] rounded-md"
 						>
 							Login
 						</Link>

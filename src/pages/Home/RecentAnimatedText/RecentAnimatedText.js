@@ -6,7 +6,7 @@ import Text from "./Text";
 const RecentAnimatedText = ({ texts }) => {
 	return (
 		<div
-			className={`text-container bg-[${secondary}]  w-[60%] my-5 h-16 flex flex-row items-center rounded-md mx-auto`}
+			className={`text-container bg-[${secondary}]  xl:w-[80%] w-[95%] my-5 h-16 flex flex-row items-center rounded-md mx-auto`}
 		>
 			{texts &&
 				texts.map((text, index) => {
@@ -15,6 +15,7 @@ const RecentAnimatedText = ({ texts }) => {
 							text={text?.text}
 							name={text?.name}
 							email={text?.email}
+							createdAt={text?.createdAt}
 							key={index}
 						/>
 					);

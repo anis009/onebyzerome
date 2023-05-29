@@ -11,7 +11,7 @@ const Contributor = ({ contributor, index, topTenContributors }) => {
 	};
 	useEffect(() => {
 		window.addEventListener("resize", handleResize);
-	}, [width]);
+	}, []);
 
 	return (
 		<div className="text-white justify-between md:w-[80%] w-full mx-auto mt-3 px-4 py-5 rounded-md shadow-md flex items-center bg-teal-900">

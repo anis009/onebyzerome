@@ -10,12 +10,8 @@ import Loading from "../../Shared/Loading/Loading.js";
 import CountResources from "../CountResources/CountResources.js";
 import Courses from "../Courses/Courses.js";
 import HomeTitle from "../HomeTitle/HomeTitle.js";
-import { secondary } from "../../../constants/colors.js";
-
-import RecentBook from "../RecentItem/RecentItem.js";
 import Recent from "../Recent/Recent.js";
 import RecentAnimatedText from "../RecentAnimatedText/RecentAnimatedText.js";
-import InfiniteAnimation from "../InfiniteAnimation/InfiniteAnimation.js";
 import {
 	getRecentBooks,
 	getRecentHandNotes,
@@ -26,6 +22,16 @@ import {
 const Home = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const { setTitle } = useContext(AuthContext);
+	const [width, setWidth] = useState();
+	const handleResize = () => {
+		setWidth(window.innerWidth);
+	};
+	useEffect(() => {
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 
 	// TODO: SET TITLE
 	useEffect(() => {
@@ -108,27 +114,31 @@ const Home = () => {
 			text: `added a question`,
 			email: recentQuestions[0]?.email,
 			name: recentQuestions[0]?.name,
+			createdAt: recentQuestions[0]?.createdAt,
 		},
 		{
 			text: `added a book`,
 			email: recentBooks[0]?.email,
 			name: recentBooks[0]?.name,
+			createdAt: recentBooks[0]?.createdAt,
 		},
 		{
 			text: `added a slide`,
 			email: recentSlides[0]?.email,
 			name: recentSlides[0]?.name,
+			createdAt: recentSlides[0]?.createdAt,
 		},
 		{
 			text: `added a Note`,
 			email: recentHandNotes[0]?.email,
 			name: recentHandNotes[0]?.name,
+			createdAt: recentHandNotes[0]?.createdAt,
 		},
 	];
 
 	return (
 		<div className={`bg-[#1a1a1a] pt-[80px] md:px-0 px-2`}>
-			<RecentAnimatedText texts={texts} />
+			{width > 800 && <RecentAnimatedText texts={texts} />}
 
 			<div className="    flex flex-col md:flex-row ">
 				<div className="md:w-[75%] w-full">
@@ -142,17 +152,17 @@ const Home = () => {
 
 				<div className={`md:w-[25%] w-full  mt-5 md:mx-5 mx-0 `}>
 					<Recent
+						data={recentHandNotes}
+						title="Recent Notes"
+						handNotes={true}
+					/>
+					<Recent
 						data={recentQuestions}
 						questions={true}
 						title="Recent Questions"
 					/>
 					<Recent data={recentBooks} title="Recent Books" />
 					<Recent data={recentSlides} title="Recent Slides" slides={true} />
-					<Recent
-						data={recentHandNotes}
-						title="Recent Notes"
-						handNotes={true}
-					/>
 				</div>
 			</div>
 		</div>

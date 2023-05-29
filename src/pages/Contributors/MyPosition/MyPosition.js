@@ -28,7 +28,7 @@ const MyPosition = ({ data, user }) => {
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
-	}, [width]);
+	}, []);
 
 	return (
 		<div className="w-full mb-8 bg-purple-700 px-4 py-5 rounded-md shadow-md">
