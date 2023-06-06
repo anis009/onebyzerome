@@ -302,7 +302,8 @@ const FileInput = ({ name, showResources }) => {
 							htmlFor=""
 							className="block mb-1 font-bold text-white capitalize"
 						>
-							semester
+							Semester (Not needed for year system)
+
 						</label>
 						<select
 							{...register("semester", {
