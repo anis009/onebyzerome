@@ -18,6 +18,7 @@ import {
 	getRecentQuestions,
 	getRecentSlides,
 } from "../../../utils/https/resourceHttp.js";
+import Announcement from "../../../components/Announcement/Announcement.js";
 
 const Home = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -138,9 +139,10 @@ const Home = () => {
 
 	return (
 		<div className={`bg-[#1a1a1a] pt-[80px] md:px-0 px-2`}>
+			<Announcement />
 			{width > 800 && <RecentAnimatedText texts={texts} />}
 
-			<div className="    flex flex-col md:flex-row ">
+			<div className="flex flex-col md:flex-row ">
 				<div className="md:w-[75%] w-full">
 					<CountResources />
 					{isVisible && (

@@ -50,10 +50,10 @@ const CourseQuestion = ({ course }) => {
 									<Tab key="all" value="all">
 										All
 									</Tab>
-									{examNames?.map((examName) => (
+									{examNames?.map((examName, index) => (
 										<Tab
 											className={`capitalize`}
-											key={examName.name}
+											key={index}
 											value={examName.name}
 										>
 											{examName.name}
@@ -73,26 +73,25 @@ const CourseQuestion = ({ course }) => {
 											))}
 										</div>
 									</TabPanel>
-									{examNames.map((examName) => (
+									{examNames.map((examName, index) => (
 										<TabPanel
-											key={examName.name}
+											key={index}
 											className="p-0 capitalize"
 											style={{ textTransform: "capitalize !important" }}
 											value={examName.name}
 										>
 											<div className="grid content-center grid-cols-1 gap-5 p-2 sm:p-10 md:grid-cols-2 lg:grid-cols-3">
 												{course.questions.map((question, index) => (
-													<>
+													<div key={index}>
 														{question &&
 															question.examName === examName.name && (
 																<CardQuestion
-																	key={index}
 																	setQuestions={setQuestions}
 																	question={question}
 																	setDeleteQuestion={setDeleteQuestion}
 																></CardQuestion>
 															)}
-													</>
+													</div>
 												))}
 											</div>
 										</TabPanel>
