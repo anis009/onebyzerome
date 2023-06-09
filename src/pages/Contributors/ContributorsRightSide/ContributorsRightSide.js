@@ -20,6 +20,9 @@ const ContributorsRightSide = () => {
 				<Loading />
 			) : (
 				<div>
+					<h1 className="text-xl text-center text-white">
+						Recent Contributions
+					</h1>
 					{data?.length > 0 &&
 						data.map((recent, index) => (
 							<Recent key={index} recent={recent} index={index + 1} />
