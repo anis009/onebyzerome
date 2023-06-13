@@ -6,7 +6,7 @@ import "./thumbnail.css";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 function ThumbnailViewer({ thumbnail, bookName, author, link }) {
-	console.log("thumbnail", thumbnail);
+	//console.log("thumbnail", thumbnail);
 	const { user } = useContext(AuthContext);
 	const fullViewHandler = () => {
 		alert("Please login to view");

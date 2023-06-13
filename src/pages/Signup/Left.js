@@ -92,7 +92,7 @@ const Left = () => {
 				})
 					.then((res) => res.json())
 					.then((data) => {
-						console.log(data);
+						//console.log(data);
 						setSignupLoading(false);
 						navigate("/");
 					})

@@ -33,7 +33,7 @@ const CountResources = () => {
 	if (isLoading) {
 		return <Loading />;
 	}
-	console.log(slides, questions, handNotes, books);
+	//console.log(slides, questions, handNotes, books);
 
 	return error ? (
 		<Alert>{error}</Alert>

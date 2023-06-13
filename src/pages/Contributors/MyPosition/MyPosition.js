@@ -10,7 +10,7 @@ const MyPosition = ({ data, user }) => {
 		const idx = data?.findIndex(
 			(userPosition) => userPosition.email === user?.email
 		);
-		console.log(idx);
+		//console.log(idx);
 		if (idx >= 0) {
 			setMyPosition({
 				...data[idx],

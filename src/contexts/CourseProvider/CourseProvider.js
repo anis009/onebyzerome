@@ -28,7 +28,7 @@ const CourseProvider = ({ children }) => {
 		const initial = async () => {
 			// TODO:: GET ALL UNIVERSITIES
 			const universitiesData = await getUniversities();
-			console.log(universitiesData);
+			// console.log(universitiesData);
 			if (!universitiesData?.success) {
 				toast.error(universitiesData?.message, {
 					duration: 1000,
@@ -128,7 +128,7 @@ const CourseProvider = ({ children }) => {
 					mycourseInfo
 				);
 				setCourseLoading(false);
-				console.log("sina-course");
+				//console.log("sina-course");
 				setCourses(data);
 			} catch (error) {
 				setCourseLoading(false);

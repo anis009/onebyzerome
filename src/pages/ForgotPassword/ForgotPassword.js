@@ -21,7 +21,7 @@ const ForgotPasswordPage = () => {
 			console.log(error);
 		}
 
-		console.log("Email:", email);
+		//console.log("Email:", email);
 		// Reset the email input field
 		setEmail("");
 	};

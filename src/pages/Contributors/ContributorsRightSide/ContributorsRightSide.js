@@ -9,7 +9,7 @@ const ContributorsRightSide = () => {
 		queryKey: ["all-recent-resources"],
 		queryFn: async () => {
 			const data = await getAllRecentResources();
-			console.log(data);
+			//console.log(data);
 			return data;
 		},
 	});

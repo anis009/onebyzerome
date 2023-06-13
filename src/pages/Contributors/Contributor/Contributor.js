@@ -20,9 +20,9 @@ const Contributor = ({ contributor, index, topTenContributors }) => {
 				<img
 					className="sm:w-20 sm:h-20 w-10 h-10 rounded-full"
 					src={
-						image && image.includes("i.ibb.co")
+						image && image?.includes("i.ibb.co")
 							? image
-							: image.includes("uploads/profile")
+							: image?.includes("uploads/profile")
 							? `${DEFAULT_URL_SERVER}/${image}`
 							: image
 					}

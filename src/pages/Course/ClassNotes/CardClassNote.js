@@ -9,7 +9,7 @@ import ThumbnailViewer from "../../Shared/ThumbnailViewer/ThumbnailViewer";
 const CardClassNote = ({ note }) => {
 	const { link, email, createdAt, session, author, bookName, thumbnail } = note;
 	const bookNameFromLink = link.substring(13, link.length);
-	console.log(bookNameFromLink);
+	//console.log(bookNameFromLink);
 
 	return (
 		<div>
