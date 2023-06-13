@@ -8,7 +8,7 @@ import { DEFAULT_URL_SERVER } from "../../../constants/url";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import Alert from "../../Shared/Alert/Alert";
 import Loading from "../../Shared/Loading/Loading";
-import { primary, secondary } from "../../../constants/colors";
+import { secondary } from "../../../constants/colors";
 import Items from "../Items/Items";
 import { getTotalItems } from "../../../utils/functions/profileFunctions";
 
