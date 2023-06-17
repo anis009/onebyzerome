@@ -5,6 +5,7 @@ import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider.js";
 import useUser from "../../../hooks/useUser.js";
 import navbarLogo from "../../../images/navbar-logo.png";
 import { DEFAULT_URL_SERVER } from "../../../constants/url.js";
+import FireAnimation from "../FireAnimation/FireAnimation.js";
 const Header = () => {
 	const [showModel, setShowModel] = useState(true);
 	const { user, logOut } = useContext(AuthContext);
@@ -44,7 +45,7 @@ const Header = () => {
 			</li>
 			<li>
 				<Link className="hover:bg-[#1a1a1a] rounded-md " to="/winners">
-					Winners
+					Winners <FireAnimation />
 				</Link>
 			</li>
 		</>
@@ -128,7 +129,7 @@ const Header = () => {
 										className="hover:bg-[#1a1a1a] rounded-md "
 										to="/winners"
 									>
-										Winners
+										Winners <FireAnimation />
 									</Link>
 								</li>
 

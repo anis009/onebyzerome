@@ -1,0 +1,26 @@
+.fire-animation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fire {
+	width: 10px;
+	height: 10px;
+	background-color: #ff6347;
+	border-radius: 50%;
+	position: absolute;
+	animation: fireAnimation 2s infinite alternate;
+	transform-origin: center;
+}
+
+@keyframes fireAnimation {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
