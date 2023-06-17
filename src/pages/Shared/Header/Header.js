@@ -42,6 +42,11 @@ const Header = () => {
 					Leaderboard
 				</Link>
 			</li>
+			<li>
+				<Link className="hover:bg-[#1a1a1a] rounded-md " to="/winners">
+					Winners
+				</Link>
+			</li>
 		</>
 	);
 
@@ -116,6 +121,14 @@ const Header = () => {
 										to="/contributors"
 									>
 										Leaderboard
+									</Link>
+								</li>
+								<li>
+									<Link
+										className="hover:bg-[#1a1a1a] rounded-md "
+										to="/winners"
+									>
+										Winners
 									</Link>
 								</li>
 

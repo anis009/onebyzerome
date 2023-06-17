@@ -22,7 +22,7 @@ import Chat from "../../pages/Chat/Chat.js";
 import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage.js";
 import ForgotPasswordPage from "../../pages/ForgotPassword/ForgotPassword.js";
 import Contributors from "../../pages/Contributors/Contributors/Contributors.js";
-
+import Winners from "../../pages/Winners/Winners.js";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -51,6 +51,10 @@ const router = createBrowserRouter([
 			{
 				path: "/contributors",
 				element: <Contributors />,
+			},
+			{
+				path: "/winners",
+				element: <Winners />,
 			},
 			{
 				path: "/contribute/questions",

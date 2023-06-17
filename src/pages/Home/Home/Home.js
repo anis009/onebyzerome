@@ -139,7 +139,7 @@ const Home = () => {
 
 	return (
 		<div className={`bg-[#1a1a1a] pt-[80px] md:px-0 px-2`}>
-			<Announcement />
+			{/* <Announcement /> */}
 			{width > 800 && <RecentAnimatedText texts={texts} />}
 
 			<div className="flex flex-col md:flex-row ">
