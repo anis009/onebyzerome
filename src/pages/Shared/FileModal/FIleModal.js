@@ -93,7 +93,7 @@ const FIleModal = ({
 				}
 			} catch (error) {
 				toast.error(
-					"Pdf File should be less than 30mb\n Thumbnail image should be less than 2mb"
+					"Pdf File should be less than 50mb\n Thumbnail image should be less than 2mb"
 				);
 				console.log(error);
 
