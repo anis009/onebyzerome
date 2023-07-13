@@ -117,6 +117,7 @@ const FIleModal = ({
 			try {
 				// TODO:: QUESTION UPLOAD
 				setUploadLoading(true);
+
 				const questionUrl = (
 					await axios.post(
 						`https://server.onebyzeroedu.com/api/upload/question?email=${user?.email}`,
@@ -124,6 +125,7 @@ const FIleModal = ({
 						config
 					)
 				).data;
+
 				setFile(questionUrl);
 				setUploadFile("");
 				toast.success("file added \n click the upload button");
